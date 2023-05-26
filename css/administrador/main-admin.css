@@ -1,0 +1,94 @@
+main {
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.top__container  {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80% 20%;
+}
+
+.title__main {
+    height: 5vh;
+    width: auto;
+    place-self: left;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 70px;
+}
+
+.crud__container {
+    place-self: center;
+    height: 4vh;
+    width: 16vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-left: 70px;
+}
+
+.crud__container i {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #095B8A;
+}
+
+.link__card {
+    height:106px;
+    width: 258px;
+}
+
+.card-professor__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 11vh;
+    width: auto;
+}
+
+/* .card-professor__container:hover {
+    transition: .2s;
+    height: 13vh;
+    width: 15vw;
+} */
+
+.card-professor__container img {
+    height: 80px;
+    width: 80px;
+}
+
+.cards__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 425px) {
+    main {
+        height: 75vh;
+    }
+
+    .top__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title__main {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .crud__container {
+        padding-top: 0;
+        padding-left: 0;
+        width: 40vw;
+    }
+}

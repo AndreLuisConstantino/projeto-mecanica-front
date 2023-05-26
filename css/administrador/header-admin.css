@@ -1,0 +1,124 @@
+header {
+    height: 15vh;
+    width: 100%;
+    background-image: url('/img/fundo-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10vh;
+    align-items: center;
+}
+
+.logo__container {
+    width: auto;
+    height: 5.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo__container img {
+    height: 5.6vh;
+    width: auto;
+}
+
+.logo__text {
+    font-weight: 700;
+    text-shadow: 4px 2px 6px #000000;
+    color: #fff;
+}
+
+.info-aluno__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 5.7vh;
+    color: #095B8A;
+}
+
+.info-aluno__container img {
+    height: 5.1vh;
+    width: auto;
+}
+
+.text__align {
+    display: flex;
+    flex-direction: column;
+}
+
+.person__container {
+    height: 5.6vh;
+    width: auto;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.professor__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+}
+
+.professor-card__container {
+    width: 374px;
+    height: 188px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+@media (max-width: 425px) {
+    header {
+        padding: 2vh;
+    }
+
+    .logo__container {
+        flex-direction: column;
+        height: 7vh;
+    }
+
+    .logo__container img {
+        height: 2.6vh;
+    }
+
+    .logo__text {
+        font-size: 1rem;
+    }
+
+    .info-aluno__container {
+        height: 4.8vh;
+        width: autos;
+    }
+
+    .info-aluno__container img {
+        height: 5vh;
+        width: auto;
+    }
+
+    .person__container {
+        height: 5vh;
+        width: auto;
+    }
+
+    .text__align {
+        font-size: .7rem;
+    }
+
+
+}
