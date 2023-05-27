@@ -1,94 +1,78 @@
-main {
+main{
     height: 70vh;
-    display: grid;
-    grid-template-rows: 100px 1fr;
-}
-
-.top__container  {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 80% 20%;
-}
-
-.title__main {
-    height: 5vh;
-    width: auto;
-    place-self: left;
-    align-items: center;
-    padding-top: 25px;
-    padding-left: 70px;
-}
-
-.crud__container {
-    place-self: center;
-    height: 4vh;
-    width: 16vw;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding-top: 25px;
-    padding-left: 70px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
 }
-
-.crud__container i {
-    font-size: 3rem;
+.professores-icon{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: "alunos icons";
+    width: 80%;
+    
+}
+.title{
+    grid-area: alunos;
+    display: flex;
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+    padding-top: 2%;
+    font-weight: bold;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    font-size: 2.5rem;
+    align-self: center;
+    justify-self: center;
+    gap: 60px;
+    padding-top: 2%;
+    color: #073f5c;   
+}
+i:hover{
+    transition: .7s;
+    transform: scale(1.3);
     cursor: pointer;
-    color: #095B8A;
 }
-
-.link__card {
-    height:106px;
-    width: 258px;
-}
-
-.card-professor__container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #D9D9D9;
-    height: 11vh;
-    width: auto;
-}
-
-/* .card-professor__container:hover {
-    transition: .2s;
-    height: 13vh;
-    width: 15vw;
-} */
-
-.card-professor__container img {
-    height: 80px;
-    width: 80px;
-}
-
-.cards__container {
+.card-container{
+    height: 50%;
+    width: 80%;
+    align-self: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 3.2vw;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
 }
+.card{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "foto nome-matricula";
+    width: 12vw;
+    height: 10vh;
 
-@media (max-width: 425px) {
-    main {
-        height: 75vh;
-    }
+    background-color: #D9D9D9;
+}
+.nome-matricula{
+    grid-area: nome-matricula;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .top__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .title__main {
-        padding-top: 0;
-        padding-left: 0;
-    }
-
-    .crud__container {
-        padding-top: 0;
-        padding-left: 0;
-        width: 40vw;
-    }
+}
+.card-matricula{
+    justify-self: center;
+}
+.card i{
+    grid-area: foto;
+    font-size: 3rem;
+    align-self: center;
+    justify-self: center;
 }
