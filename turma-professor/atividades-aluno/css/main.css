@@ -1,0 +1,112 @@
+main{
+    height: 75vh;
+    display: grid;
+    grid-template-rows: 10% 15% 65%;
+    grid-template-areas: 
+    "alunos-legenda"
+    "filter"
+    "atividades";
+}
+.alunos-legenda{
+    grid-area: alunos-legenda;
+    position: absolute;
+    display: grid;
+    left: 5vw;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "legenda alunos";
+    width: 70vw;
+    margin-top: 4vh;
+}
+.title{
+    grid-area: alunos;
+    display: flex;
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+    padding-top: 2%;
+    font-weight: bold;
+}
+.legendas{
+    grid-area: legenda;
+    display: flex;
+    font-size: 1rem;
+    align-self: center;
+    justify-self: start;
+    gap: 20px;
+    padding-top: 2%;
+    color: #073f5c;   
+}
+.blue-square{
+    height: 10px;
+    width: 10px;
+    align-self: center;
+    background-color: blue;
+}
+.red-square{
+    height: 10px;
+    width: 10px;
+    align-self: center;
+    background-color: red;
+}
+
+.container-filter {
+    grid-area: filter;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.filter {
+    width: 5vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    color: #2884B2;
+}
+
+.card-container{
+    grid-area: atividades;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vh;
+    cursor: pointer;
+    border-left: 8px solid red;
+    background-color: #D9D9D9;
+}
+.card-blue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vh;
+    cursor: pointer;
+    border-left: 8px solid #2884B2;
+    background-color: #D9D9D9;
+}
+.card-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.card-nome{
+    justify-self: center;
+}
