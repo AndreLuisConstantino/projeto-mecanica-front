@@ -1,0 +1,44 @@
+main{
+    height: 75vh;
+    width: 100%;
+}
+
+.container-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    gap: 10%;
+}
+
+.title{
+    color: #095B8A;
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    overflow-y: scroll;
+    gap: 3%;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 12vw;
+    height: 10vh;
+    background-color: #D9D9D9;
+}
+
