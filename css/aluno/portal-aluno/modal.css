@@ -1,0 +1,144 @@
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000190;
+    display: none;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 10vh auto;
+    border: 1px solid #000000;  
+   
+}
+
+.modal-header{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    color: #fff;
+    background-color: #494949;
+}
+
+.modal-header i{
+    font-size: 1.8rem;
+}
+
+.modal-main{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.modal-card-perfil{
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+    gap: 3%;
+    background-color: #d3d3d3;
+
+}
+
+.pefil-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60%;
+    border-radius: 100%;
+    margin-left: 2%;
+    background-color: #fff;
+}
+
+.pefil-image img{
+    width: 100%;
+}
+
+.modal-card-information{
+    display: grid;
+    grid-template-areas: 
+    "left right";
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: 60%;
+    margin-left: 5%;
+    background-color: #d3d3d3;
+    padding: 5%;
+}
+
+.container-card-information-right{
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+}
+
+
+
+.input-profile{ 
+    background-color: #fff;
+}
+.profile-card-information{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.profile-card-information img{
+    width: 100%;
+}
+
+.container-card-information-left{
+    grid-area: left;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.date-birth{
+    width: 12vw;
+    height: 5vh;
+    background-color: #fff;
+    color: #777777;
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    
+}
+
+form{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+input{
+    width: 12vw;
+    height: 5vh;
+    border: #fff;
+}
+
