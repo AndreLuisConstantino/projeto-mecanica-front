@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/footer.css">
     <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/main.css">
     <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/header.css">
+    <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/modal.css">
+    <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/modal-adcionar.css">
+    <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/modal-deletar.css">
+    <link rel="stylesheet" href="../../css/professor/professor-gerenciar-atividades/modal-editar.css">
+    <script src="../../js/professor/professor-gerenciar-atividades/script.js" defer type="module"></script>
     <title>Atividades</title>
 </head>
 <body>
@@ -29,12 +34,12 @@
         </div>
     </header>
     <main>
-        <div class="tarefa-icon">
+        <div class="alunos-icon">
             <span class="title">TAREFAS</span>
             <div class="icons">
-                <i class="fa-sharp fa-solid fa-plus"></i>
-                <i class="fa-solid fa-x"></i>
-                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-sharp fa-solid fa-plus adcionar"></i>
+                <i class="fa-solid fa-trash deletar"></i>
+                <i class="fa-solid fa-pen-to-square editar"></i>
             </div>
         </div>
 
@@ -106,6 +111,69 @@
             </div>
             
         </div>
+
+        <div class="modal">
+            <div class="modal-content-adcionar">
+                <div class="modal-header">
+                    <h2>ADCIONAR TAREFA</h2>
+                    <i class="fa-solid fa-x quit-add"></i>
+                </div>
+
+                <div class="modal-main-adcionar">    
+
+                    <span class="title">INFORMAÇÕES DA ATIVIDADE</span>
+
+                    <div class="container-adcionar">
+
+                        <form>
+                            <span class="form-text">Nome da atividade</span>
+                            <input type="text">
+                            <span class="form-text">Nome da Peça</span>
+                            <input type="text">
+                            <span class="form-text">Descrição</span>
+                            <input type="text">
+                        </form>
+    
+                        <div class="save">
+                            <span>SALVAR</span>
+                            <i class="fa-regular fa-floppy-disk"></i>   
+                        </div>
+
+                    </div>
+                    
+                    
+                </div>
+            </div>
+    
+
+            
+            <div class="modal-content-deletar">
+                <div class="modal-header">
+                    <h2>DELETAR TAREFA</h2>
+                    <i class="fa-solid fa-x quit-del"></i>
+                </div>
+
+                <div class="modal-main">
+                    <div class="save">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-content-editar">
+                <div class="modal-header">
+                    <h2>EDITAR TAREFA</h2>
+                    <i class="fa-solid fa-x quit-edit"></i>
+
+                </div>
+
+                <div class="modal-main">
+                    <div class="save"></div>
+                </div>
+                    
+            </div>
+        </div>
+
     </main>
     <footer>
         <span>Copyright 2023 © Todos os direitos reservados.</span>
