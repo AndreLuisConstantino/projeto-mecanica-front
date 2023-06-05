@@ -3,17 +3,17 @@ main{
     display: flex;
     justify-content: center;
 }
-.tarefa-icon{
+.materias-icon{
     position: absolute;
     left: 18vw;
     display: grid;
     grid-template-columns: 90% 10%;
-    grid-template-areas: "tarefa icons";
+    grid-template-areas: "materias icons";
     width: 70vw;
     margin-top: 4vh;
 }
 .title{
-    grid-area: tarefa;
+    grid-area: materias;
     display: flex;
     font-size: 2rem;
     align-self: center;
@@ -40,7 +40,6 @@ main{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    overflow-y: scroll;
 }
 .card{
     display: flex;
@@ -51,6 +50,10 @@ main{
     height: 12vh;
     cursor: pointer;
     background-color: #D9D9D9;
+    transition: 0.7s;
+}
+.card:hover{
+    transform: scale(1.05)
 }
 .card-title{
     font-size: 2rem;
