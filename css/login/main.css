@@ -1,0 +1,62 @@
+.container__img-esquerda {
+    grid-column: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.container__img-esquerda img {
+    height: 90vh;
+    width: 100%;
+}
+
+.container_img-direita {
+    grid-column: 3;
+    height: 100%;
+    width: 100%;
+}
+
+.container_img-direita img {
+    height: 90vh;
+    width: 100%;
+    justify-content: right;
+}
+
+.container__login {
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-senai__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 10.4vh;
+}
+
+.login__container {
+    height: 26.6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.login__container input {
+    width: 19vw;
+}
+
+.button-entrar_container {
+    width: 100%;
+    padding: 10px;
+}
+
+.btn {
+    height: 5vh;
+    width: 7vw;
+}
