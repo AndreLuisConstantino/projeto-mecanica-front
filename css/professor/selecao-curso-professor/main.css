@@ -43,12 +43,11 @@ main{
 }
 .card{
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: 25% 35% 25%;
     grid-template-areas: 
     "nome"
     "sigla"
-    "carga"
-    "excluir";
+    "carga";
     width: 12vw;
     height: 25vh;
     cursor: pointer;
@@ -72,9 +71,6 @@ main{
 }
 .card-carga{
     color: #838383;
-}
-.card-exclusao{
-    justify-self: center;
 }
 .card-h1{
     font-size: 2rem;
