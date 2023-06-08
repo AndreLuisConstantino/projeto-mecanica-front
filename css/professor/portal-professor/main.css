@@ -25,7 +25,6 @@ main{
 .card:hover{
     transform: scale(1.1);
     cursor: pointer;
-    background-color: #2884B2;
     color: #ffffff;
 }
 
@@ -37,9 +36,6 @@ main{
     color: #8A8A8A;
     transition: .7s;
 }
-.card:hover i{
-    color: #fff;
-}
 
 .card span{
     align-self: center;
@@ -48,8 +44,4 @@ main{
     color: #8A8A8A;
     font-weight: 700;
     transition: .7s;
-}
-
-.card:hover span {
-    color: #ffffff;
 }
