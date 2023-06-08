@@ -1,0 +1,80 @@
+main{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+.curso-icon{
+    position: absolute;
+    left: 18vw;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: "curso icons";
+    width: 70vw;
+    margin-top: 4vh;
+}
+.title{
+    grid-area: curso;
+    display: flex;
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+    padding-top: 2%;
+    font-weight: bold;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    font-size: 2.5rem;
+    align-self: center;
+    justify-self: center;
+    gap: 60px;
+    padding-top: 2%;
+    color: #073f5c;   
+}
+.card-container{
+    height: 50%;
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.card{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: 
+    "nome"
+    "sigla"
+    "carga";
+    width: 12vw;
+    height: 18.6vh;
+    cursor: pointer;
+    background-color: #D9D9D9;
+}
+.card span{
+    align-self: center;
+    justify-self: center;
+
+}
+.card i{
+    font-size: 1.5rem;
+    color: red;
+    align-self: center;
+    justify-self: center;
+}
+.card-title{
+    font-size: .9rem;
+    font-weight: 700;
+}
+.card-carga{
+    color: #838383;
+}
+.card-exclusao{
+    justify-self: center;
+}
+.card-h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
