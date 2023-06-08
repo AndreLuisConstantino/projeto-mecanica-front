@@ -1,19 +1,19 @@
 main{
     height: 75vh;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
-.professores-icon{
+.alunos-icon{
     position: absolute;
     left: 18vw;
     display: grid;
     grid-template-columns: 90% 10%;
-    grid-template-areas: "professores icons";
+    grid-template-areas: "alunos icons";
     width: 70vw;
     margin-top: 4vh;
 }
 .title{
-    grid-area: professores;
+    grid-area: alunos;
     display: flex;
     font-size: 2rem;
     align-self: center;
@@ -43,27 +43,11 @@ main{
     overflow-y: scroll;
 }
 .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "foto nome-matricula";
     width: 12vw;
-    height: 12vh;
-    cursor: pointer;
+    height: 10vh;
+
     background-color: #D9D9D9;
-    transition: 0.7s;
-}
-.card:hover{
-    transform: scale(1.05);
-}
-.nome-materia{
-    display: flex;
-    flex-direction: column;
-}
-.card-nome{
-    font-size: 1.5rem;
-}
-.card-materia{
-    justify-self: center;
-    align-self: center;
 }

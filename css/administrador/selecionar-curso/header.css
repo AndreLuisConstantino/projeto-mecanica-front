@@ -12,16 +12,18 @@ header {
 }
 
 .logo__container {
-    width: 88.84vh;
+    width: 22.84vw;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    gap: 10px;
 }
 
 .logo__text {
     font-weight: 700;
+    font-size: 1.4rem;
     text-shadow: 4px 2px 6px #000000;
     color: #fff;
 }

@@ -1,19 +1,19 @@
 main{
     height: 75vh;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
-.professores-icon{
+.curso-icon{
     position: absolute;
     left: 18vw;
     display: grid;
     grid-template-columns: 90% 10%;
-    grid-template-areas: "professores icons";
+    grid-template-areas: "curso icons";
     width: 70vw;
     margin-top: 4vh;
 }
 .title{
-    grid-area: professores;
+    grid-area: curso;
     display: flex;
     font-size: 2rem;
     align-self: center;
@@ -40,30 +40,43 @@ main{
     justify-content: center;
     align-items: center;
     gap: 15px;
-    overflow-y: scroll;
 }
 .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "nome"
+    "sigla"
+    "carga"
+    "excluir";
     width: 12vw;
-    height: 12vh;
+    height: 25vh;
     cursor: pointer;
     background-color: #D9D9D9;
     transition: 0.7s;
 }
-.card:hover{
-    transform: scale(1.05);
-}
-.nome-materia{
-    display: flex;
-    flex-direction: column;
-}
-.card-nome{
-    font-size: 1.5rem;
-}
-.card-materia{
-    justify-self: center;
+.card span{
     align-self: center;
+    justify-self: center;
+
+}
+.card i{
+    font-size: 1.5rem;
+    color: red;
+    align-self: center;
+    justify-self: center;
+}
+.card-title{
+    font-size: .9rem;
+    font-weight: 700;
+}
+.card-carga{
+    color: #838383;
+}
+.card-exclusao{
+    justify-self: center;
+}
+.card-h1{
+    font-size: 2rem;
+    font-weight: bold;
 }
