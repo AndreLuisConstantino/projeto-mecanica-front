@@ -54,6 +54,14 @@
 .button-entrar_container {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.outro-usuario {
+    color: red;
 }
 
 .btn {
