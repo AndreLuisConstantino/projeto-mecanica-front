@@ -67,24 +67,31 @@ main{
     align-self: center;
     justify-self: center;
 }
+
 .card__curso i{
     font-size: 1.5rem;
-    color: red;
     align-self: center;
     justify-self: center;
 }
+
 .card__title{
     font-size: .9rem;
     font-weight: 700;
 }
+
 .card__carga{
     color: #838383;
 }
+
 .card__exclusao{
     justify-self: center;
 }
+
 .card__h1{
     font-size: 2rem;
     font-weight: bold;
 }
 
+.fa-x {
+    color: #B30000;
+}

@@ -66,5 +66,38 @@
 
 .btn {
     height: 5vh;
-    width: 7vw;
+
+}
+
+@media (max-width: 425px) {
+    main {
+        display: flex;
+    }
+
+    .container__img-esquerda {
+        display: none;
+    }
+
+    .container_img-direita {
+        display: none;
+    }
+
+    .login__container {
+        width: 100%;
+    }
+
+    .container__input {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .container__input input {
+        width: 90%;
+    }
+
+    .btn {
+        width: 100px;
+    }
 }

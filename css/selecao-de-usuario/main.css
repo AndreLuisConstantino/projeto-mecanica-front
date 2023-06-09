@@ -7,11 +7,12 @@ main {
 }
 
 .card__container {
-    width: 47vw;
+    width: 80%;
     height: 20.2vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .card {
@@ -20,4 +21,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 425px) {
+    .card__container {
+        flex-direction: column;
+        height: 40vh;
+    }
 }
