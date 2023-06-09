@@ -48,71 +48,46 @@
                 <a href="">
                     <i class="fa-solid fa-pen-to-square"></i>
                 </a> -->
+                <!--botão modal adicionar -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
                     <i class="fa-sharp fa-solid fa-plus"></i>
                 </button>
+                <!--botão modal adicionar -->
 
-                <div class="modal fade" id="modal-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">ADICIONAR CURSO</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR CURSO</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class="card-container">
 
 
-            <a class="card__curso" href="#">
-                <span class="card__title">Nome do Curso</span>
-                <span class="card__h1">Sigla</span>
-                <span class="card__carga">Carga Horária</span>
-                <div href="" class="card__interacao">
+            <div class="card__curso" href="./portal-admin.html">
+                <a href="./portal-admin.html" class="link">
+                    <span class="card__title">Nome do Curso</span>
+                    <span class="card__h1">Sigla</span>
+                    <span class="card__carga">Carga Horária</span>
+                </a>
+
+                <div class="card__interacao">
                     <div>
+
+                        <!--botão modal excluir-->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
+                            data-bs-target="#staticBackdrop">
                             <i class="fa-solid fa-x"></i>
                         </button>
+                        <!--botão modal excluir-->
 
+                        <!--botão modal editar-->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#modal-editar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
+                        <!--botão modal editar-->
                     </div>
                 </div>
-            </a>
+            </div>
+
+
 
 
 
@@ -131,7 +106,7 @@
                 <span class="card-title">Nome do Curso</span>
                 <span class="card-h1">Sigla</span>
                 <span class="card-carga">Carga Horária</span>
-                <a href="" class="card-exclusao">
+                <a href="" cl'ass="card-exclusao">
                     <div>
                         <i class="fa-solid fa-x"></i>
                         <span>Excluir curso</span>
@@ -139,6 +114,160 @@
                 </a>
 
             </div> -->
+        </div>
+
+        <!--modal adicionar-->
+        <div class="modal fade" id="modal-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">CRIAR CURSO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-curso">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome do Curso:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="formulario-direito">
+                                <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal adicionar-->
+
+        <!--modal editar-->
+        <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR CURSO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-curso">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome do Curso:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="formulario-direito">
+                                <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal excluir-->
+        <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div> -->
+        <!-- modal excluir-->
+        <!-- modal excluir-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">EXCLUIR TAREFA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body excluir-body">
+                        <span class="alert-excluir">Você realmente deseja excluir essa tarefa?</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- modal excluir-->
         </div>
 
     </main>
