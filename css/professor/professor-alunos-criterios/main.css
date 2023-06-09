@@ -1,11 +1,13 @@
 main{
     height: 75vh;
     display: grid;
+    grid-template-rows: 10% 15% 65%;
     grid-template-areas: 
     "alunos-legenda"
-    "";
+    "filter"
+    "atividades";
 }
-.title-container{
+.alunos-legenda{
     grid-area: alunos-legenda;
     position: absolute;
     display: grid;
