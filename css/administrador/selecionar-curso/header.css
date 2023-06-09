@@ -26,6 +26,7 @@ header {
     font-size: 1.4rem;
     text-shadow: 4px 2px 6px #000000;
     color: #fff;
+    font-family:  'Inter', 'sans-serif';
 }
 
 .info-aluno__container {
@@ -36,6 +37,7 @@ header {
     width: 250px;
     height: auto;
     color: #095B8A;
+    font-family:  'Inter', 'sans-serif';
 }
 
 .info-aluno__container img {

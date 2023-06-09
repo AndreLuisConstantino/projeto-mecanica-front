@@ -7,4 +7,5 @@ footer {
     flex-direction: column;
     font-size: .7rem;
     color: #fff;
+    font-family:  'Inter', 'sans-serif';
 }
