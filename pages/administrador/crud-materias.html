@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,15 @@
     <link rel="stylesheet" href="../../css/administrador/criar-materia/header.css">
     <link rel="stylesheet" href="../../css/administrador/criar-materia/main.css">
     <link rel="stylesheet" href="../../css/administrador/criar-materia/footer.css">
+    <link rel="stylesheet" href="../../css/administrador/criar-materia/modal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <title>Criar Matéria</title>
 </head>
+
 <body>
     <header>
         <div class="logo__container">
@@ -32,38 +40,217 @@
         <div class="materias-icon">
             <span class="title">MATÉRIAS</span>
             <div class="icons">
-                <i class="fa-sharp fa-solid fa-plus"></i>
-                <i class="fa-solid fa-x"></i>
-                <i class="fa-solid fa-pen-to-square"></i>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                </button>
             </div>
         </div>
 
         <div class="card-container">
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
+            <div class="card__materia">
+                <span class="card__title">MATÉRIA</span>
+                <span class="card__carga">Carga Horária</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
             </div>
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
+            <div class="card__materia">
+                <span class="card__title">MATÉRIA</span>
+                <span class="card__carga">Carga Horária</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
             </div>
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
+            <div class="card__materia">
+                <span class="card__title">MATÉRIA</span>
+                <span class="card__carga">Carga Horária</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
             </div>
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
+            <div class="card__materia">
+                <span class="card__title">MATÉRIA</span>
+                <span class="card__carga">Carga Horária</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
             </div>
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
-            </div>
-            <div class="card">
-                <span class="card-title">MATÉRIA</span>
-                <span class="card-nome">Carga Horária</span>
+
+        </div>
+        <!--modal adicionar-->
+        <div class="modal fade" id="modal-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">CRIAR MATERIA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-curso">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da materia:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="formulario-direito">
+                                <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <!--modal adicionar-->
+
+        <!--modal editar-->
+        <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR MATERIA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-curso">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da materia:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div container="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="formulario-direito">
+                                <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal editar-->
+
+        <!-- modal excluir-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">EXCLUIR MATERIA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body excluir-body">
+                        <span class="alert-excluir">Você realmente deseja excluir esse materia?</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- modal excluir-->
     </main>
     <footer>
         <span>Copyright 2023 © Todos os direitos reservados.</span>
@@ -71,4 +258,5 @@
             SENAI-SP.</span>
     </footer>
 </body>
+
 </html>

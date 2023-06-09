@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../../css/professor/professor-turmas/header.css">
     <link rel="stylesheet" href="../../css/professor/professor-turmas/main.css">
     <link rel="stylesheet" href="../../css/professor/professor-turmas/footer.css">
+    <link rel="stylesheet" href="../../css/administrador/crud-turmas/modal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../../js/adm/script.js" defer type="module"></script>
     <title>Gerenciador de Turmas</title>
 </head>
 
@@ -34,39 +41,249 @@
         <div class="turma-icon">
             <span class="title">TURMAS</span>
             <div class="icons">
-                <i class="fa-sharp fa-solid fa-plus"></i>
+                <!-- <i class="fa-sharp fa-solid fa-plus"></i>
                 <i class="fa-solid fa-x"></i>
-                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-pen-to-square"></i> -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-adicionar">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                </button>
             </div>
         </div>
 
 
         <div class="card-container">
-            <a href="" class="card-link">
-                <div class="card">
-                    <span class="card-title">Mecânica de Usinagem</span>
-                    <h1 class="card-sigla">M1</h1>
-                    <span class="card-periodo">Matutino</span>
 
+            <div class="card__turma">
+                <span class="card__title">Mecânica de Usinagem</span>
+                <h1 class="card__sigla">M1</h1>
+                <span class="card__periodo">Matutino</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
                 </div>
-            </a>
-            <a href="" class="card-link">
-                <div class="card">
-                    <span class="card-title">Mecânica de Usinagem</span>
-                    <h1 class="card-sigla">M2</h1>
-                    <span class="card-periodo">Matutino</span>
+            </div>
+            <div class="card__turma">
+                <span class="card__title">Mecânica de Usinagem</span>
+                <h1 class="card__sigla">M1</h1>
+                <span class="card__periodo">Matutino</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
+            </div>
+            <div class="card__turma">
+                <span class="card__title">Mecânica de Usinagem</span>
+                <h1 class="card__sigla">M1</h1>
+                <span class="card__periodo">Matutino</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
+            </div>
+            <div class="card__turma">
+                <span class="card__title">Mecânica de Usinagem</span>
+                <h1 class="card__sigla">M1</h1>
+                <span class="card__periodo">Matutino</span>
+                <div class="buttons__container">
+                    <!--botão modal excluir-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <!--botão modal excluir-->
+                    <!--botão modal editar-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <!--botão modal editar-->
+                </div>
+            </div>
 
-                </div>
-            </a>
-            <a href="" class="card-link">
-                <div class="card">
-                    <span class="card-title">Mecânica de Usinagem</span>
-                    <h1 class="card-sigla">M3</h1>
-                    <span class="card-periodo">Matutino</span>
 
-                </div>
-            </a>
         </div>
+        <!-- modal excluir-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">EXCLUIR TURMA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body excluir-body">
+                        <span class="alert-excluir">Você realmente deseja excluir essa turma?</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <!-- modal excluir-->
+        </div>
+
+        <!--modal editar-->
+        <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR TURMA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-aluno">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da turma:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Período da
+                                            turma:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <form class="formulario-direito">
+                                <div class="container_form">
+                                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                                    <input type="text" id="inputPassword5" class="form-control"
+                                        aria-labelledby="passwordHelpBlock">
+                                </div>
+                                <div class="container_form">
+                                    <label for="exampleFormControlInput1" class="form-label">Senha:</label>
+                                    <input type="password" id="inputPassword5" class="form-control"
+                                        aria-labelledby="passwordHelpBlock">
+                                </div>
+
+                            </form> -->
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal editar-->
+
+        <!--modal adicionar-->
+        <div class="modal fade" id="modal-adicionar" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">CRIAR TURMA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-aluno">
+                            <h1 class="form-title">Cadastro de informações</h1>
+                            <form class="formulario-esquerdo">
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da turma:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+
+                                <div class="container_form">
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Período da
+                                            turma:</label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="inputPassword5" class="form-control"
+                                            aria-labelledby="passwordHelpBlock">
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- <form class="formulario-direito">
+                                <div class="container_form">
+                                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                                    <input type="text" id="inputPassword5" class="form-control"
+                                        aria-labelledby="passwordHelpBlock">
+                                </div>
+                                <div class="container_form">
+                                    <label for="exampleFormControlInput1" class="form-label">Senha:</label>
+                                    <input type="password" id="inputPassword5" class="form-control"
+                                        aria-labelledby="passwordHelpBlock">
+                                </div>
+
+                            </form> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal adicionar-->
     </main>
     <footer>
         <span>Copyright 2023 © Todos os direitos reservados.</span>

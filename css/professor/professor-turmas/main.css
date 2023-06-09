@@ -1,5 +1,6 @@
 main{
     height: 75vh;
+    font-family:  'Inter', 'sans-serif';
 }
 .turma-icon{
     position: absolute;
@@ -39,36 +40,43 @@ main{
     align-items: center;
     gap: 40px;
 }
-.card{
+.card__turma{
     display: grid;
-    grid-template-rows: 25% 50% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas: 
     "title"
     "sigla"
-    "periodo";
-    height: 20vh;
+    "periodo"
+    "botoes";
+    min-height: 25vh;
     width: 15vw;
     padding: 15px;
     background-color: #D9D9D9;
     transition: .7s;
 }
-.card-title{
+.card__title{
     grid-area: title;
     justify-self: center;
     align-self: center;
     transition: .7s;
 }
-.card-sigla{
+.card__sigla{
     grid-area: sigla;
     justify-self: center;
     align-self: center;
     font-weight: bold;
     transition: .7s;
 }
-.card-periodo{
+.card__periodo{
     grid-area: periodo;
     justify-self: center;
     align-self: center;
     color: #838383;
     transition: .7s;
+}
+
+.buttons__container {
+    grid-area: botoes;
+    justify-self: center;
+    align-self: center;
 }
