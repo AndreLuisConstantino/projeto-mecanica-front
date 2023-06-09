@@ -1,51 +1,11 @@
-.modal{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000190;
-    display: none;
+.modal-dialog {
+    min-width:  44vw;
 }
 
-.modal-header{
-    width: 100%;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
+.modal-header {
+    background-color: #737373;
+}
+
+.modal-title {
     color: #fff;
-    background-color: #494949;
-}
-
-.modal-header i{
-    font-size: 1.8rem;
-}
-
-.modal-main{    
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-.save{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 5vw;
-    height: 3vh;
-    gap: 3%;   
-    color: #2884B2;
-    background-color: #bebebe;
-    margin-top: 40%;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
 }
