@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
     padding: 50px;
     align-items: center;
+    font-family:  'Inter', 'sans-serif';
 }
 
 .logo__container {
