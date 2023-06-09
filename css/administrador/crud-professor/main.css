@@ -1,0 +1,118 @@
+main{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+.alunos-icon{
+    position: absolute;
+    left: 18vw;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: "alunos icons";
+    width: 70vw;
+    margin-top: 4vh;
+}
+.title{
+    grid-area: alunos;
+    display: flex;
+    font-size: 2rem;
+    align-self: center;
+    justify-self: center;
+    padding-top: 2%;
+    font-weight: bold;
+}
+.icons{
+    grid-area: icons;
+    display: flex;
+    font-size: 2.5rem;
+    align-self: center;
+    justify-self: center;
+    gap: 60px;
+    padding-top: 2%;
+    color: #073f5c;   
+}
+.card-container{
+    height: 50%;
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
+}
+.card__professor{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 12vw;
+    height: 18vh;
+    background-color: #D9D9D9;
+}
+.card__professor a {
+    color: #000;
+    text-decoration: none;
+}
+.card-nome{
+    font-weight: 600;
+}
+.card-materia{
+    font-weight: 600;
+}
+.card-icon{
+    font-size: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.nome-materia{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-top: 20px;
+}
+.card__interacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-delete{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    gap: 4px;
+}
+.modal__container{
+    display: grid;
+    height: 70%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "input list";
+    background-color: #ccc;
+    padding: 1%;
+}
+.materias__container{
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.input-container{
+    grid-area: input;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.title-input{
+    width: 30vw;
+}
+.input-h1{
+    font-size: 1.5rem;
+}
+
+.alert-excluir{
+    font-size: 1.5rem;
+    align-self: center;
+    justify-self: center;
+    color: red;
+}
+
