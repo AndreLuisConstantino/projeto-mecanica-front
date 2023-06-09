@@ -83,7 +83,7 @@ main{
     color: #838383;
 }
 
-.card__exclusao{
+.card__interacao{
     justify-self: center;
 }
 
@@ -92,6 +92,8 @@ main{
     font-weight: bold;
 }
 
-.fa-x {
-    color: #B30000;
+.card-container a {
+    color: #000;
+    text-decoration: none;
 }
+

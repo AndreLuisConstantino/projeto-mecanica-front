@@ -1,0 +1,11 @@
+.modal-dialog {
+    min-width:  44vw;
+}
+
+.modal-header {
+    background-color: #737373;
+}
+
+.modal-title {
+    color: #fff;
+}
