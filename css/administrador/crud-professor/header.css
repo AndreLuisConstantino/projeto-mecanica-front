@@ -1,0 +1,60 @@
+header {
+    width: 100%;
+    height: 15vh;
+    background-image: url('../../../img/fundo-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+.logo__container {
+    width: 32.84vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__text {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-shadow: 4px 2px 6px #000000;
+    color: #fff;
+}
+
+.info-aluno__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    color: #095B8A;
+}
+
+.info-aluno__container img {
+    height: 45px;
+    
+}
+
+.text__align {
+    display: flex;
+    flex-direction: column;
+}
+
+.person__container {
+    height: 55px;
+    width: 55px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
