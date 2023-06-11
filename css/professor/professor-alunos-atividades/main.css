@@ -2,11 +2,12 @@ main{
     height: 75vh;
     display: grid;
     grid-template-areas: 
-    "alunos-legenda"
-    "";
+    "titulo"
+    "criterios"
+    "botoes";
+    grid-template-rows: 15% 70% 15%;
 }
 .title-container{
-    grid-area: alunos-legenda;
     position: absolute;
     display: grid;
     left: 5vw;
@@ -14,6 +15,7 @@ main{
     grid-template-areas: "legenda alunos";
     width: 70vw;
     margin-top: 4vh;
+    grid-area: titulo;
 }
 .title{
     grid-area: alunos;
@@ -67,42 +69,10 @@ main{
     color: #2884B2;
 }
 
-.card-container{
-    grid-area: atividades;
-    height: 80%;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-self: center;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    overflow-y: scroll;
+.criterios-container {
+    grid-area: criterios;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 12vw;
-    height: 12vh;
-    cursor: pointer;
-    background-color: #D9D9D9;
-}
-.card-blue{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 12vw;
-    height: 12vh;
-    cursor: pointer;
-    background-color: #D9D9D9;
-}
-.card-title{
-    font-size: 2rem;
-    font-weight: bold;
-}
-.card-nome{
-    justify-self: center;
+
+.buttons-tarefa__container {
+    grid-area: botoes;
 }
