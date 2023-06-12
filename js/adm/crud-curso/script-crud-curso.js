@@ -3,7 +3,8 @@
 import {
     getCursos,
     inserirCurso,
-    atualizaCurso
+    atualizaCurso,
+    deletarDadosCurso
 } from "./API/cursoAPI.js"
 
 const cursos = await getCursos()
@@ -57,7 +58,8 @@ const criarCardCurso = (curso) => {
         localStorage.setItem(`descricao-editar-${curso.sigla}`, curso.descricao)
         localStorage.setItem(`sigla-editar-${curso.sigla}`, curso.sigla)
         localStorage.setItem(`carga-editar-${curso.sigla}`, curso.carga_horaria)
-        editarCurso(curso)
+        editarCurso()
+        
     })
     
     //<i class="fa-solid fa-x"></i> icone de excluir
@@ -105,12 +107,12 @@ const criarCurso = () => {
             }
 
             inserirCurso(curso)
-            window.location.reload(true)                        
+            window.location.reload(true)                     
         }
     })
 }
 
-const editarCurso = (curso) => {
+const editarCurso = () => {
     const buttonEditar = document.getElementById('salvarEditar')
 
     const idAntigo = localStorage.getItem('id-editar')
@@ -124,10 +126,10 @@ const editarCurso = (curso) => {
     const inputCargaCursoEditar = document.getElementById('inputCargaCursoEditar')
     const textareaDescricaoCursoEditar = document.getElementById('textareaDescricaoCursoEditar')
 
-    inputNomeCursoEditar.value = nomeAntigo
-    inputSiglaCursoEditar.value = siglaAntiga
-    inputCargaCursoEditar.value = cargaAntiga
-    textareaDescricaoCursoEditar.value = descricaoAntiga
+    // inputNomeCursoEditar.value = nomeAntigo
+    // inputSiglaCursoEditar.value = siglaAntiga
+    // inputCargaCursoEditar.value = cargaAntiga
+    // textareaDescricaoCursoEditar.value = descricaoAntiga
 
     buttonEditar.addEventListener('click', () => {
         const nomeCurso = inputNomeCursoEditar.value
@@ -148,10 +150,23 @@ const editarCurso = (curso) => {
             }
 
             atualizaCurso(curso)
-            window.location.reload(true)     
+            window.location.reload(true) 
         }
     })
 }
+
+const deletaCurso = () => {
+    const buttonExcluir = document.getElementById('excluir')
+
+    const idCurso = localStorage.getItem('id-excluir')
+
+    buttonExcluir.addEventListener('click', () => {
+        deletarDadosCurso(idCurso)
+        window.location.reload(true)
+    })
+}
+    
+
 
 const carregarCards = () => {
     const container = document.querySelector('.card-container')
@@ -162,4 +177,5 @@ const carregarCards = () => {
 
 criarCurso()
 editarCurso()
+deletaCurso()
 carregarCards()

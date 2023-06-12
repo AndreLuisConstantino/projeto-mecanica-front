@@ -9,3 +9,9 @@ footer {
     color: #fff;
     font-family:  'Inter', 'sans-serif';
 }
+
+@media (max-width: 425px) {
+    footer {
+        text-align: center;
+    }
+}

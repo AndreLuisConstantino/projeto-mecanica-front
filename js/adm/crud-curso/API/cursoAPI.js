@@ -34,3 +34,12 @@ export const atualizaCurso = async (curso) => {
 
     fetch(url, options)
 }
+
+export const deletarDadosCurso = async (id) => {
+    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso/id/${id}`
+    const options = {
+      method: 'DELETE'
+    }
+  
+    fetch(url, options)
+}
