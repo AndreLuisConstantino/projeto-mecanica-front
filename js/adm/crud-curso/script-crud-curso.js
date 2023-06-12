@@ -52,11 +52,12 @@ const criarCardCurso = (curso) => {
     buttonEditar.setAttribute("data-bs-toggle", "modal")
     buttonEditar.setAttribute("data-bs-target", "#modal-editar")
     buttonEditar.addEventListener('click', () => {
-        localStorage.setItem('id-editar', curso.id)
-        localStorage.setItem('nome-editar', curso.nome)
-        localStorage.setItem('descricao-editar', curso.descricao)
-        localStorage.setItem('sigla-editar', curso.sigla)
-        localStorage.setItem('carga-editar', curso.carga_horaria)
+        localStorage.setItem(`id-editar-${curso.sigla}`, curso.id)
+        localStorage.setItem(`nome-editar-${curso.sigla}`, curso.nome)
+        localStorage.setItem(`descricao-editar-${curso.sigla}`, curso.descricao)
+        localStorage.setItem(`sigla-editar-${curso.sigla}`, curso.sigla)
+        localStorage.setItem(`carga-editar-${curso.sigla}`, curso.carga_horaria)
+        editarCurso(curso)
     })
     
     //<i class="fa-solid fa-x"></i> icone de excluir
@@ -109,7 +110,7 @@ const criarCurso = () => {
     })
 }
 
-const editarCurso = () => {
+const editarCurso = (curso) => {
     const buttonEditar = document.getElementById('salvarEditar')
 
     const idAntigo = localStorage.getItem('id-editar')
