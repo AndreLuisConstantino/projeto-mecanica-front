@@ -53,13 +53,11 @@ const criarCardCurso = (curso) => {
     buttonEditar.setAttribute("data-bs-toggle", "modal")
     buttonEditar.setAttribute("data-bs-target", "#modal-editar")
     buttonEditar.addEventListener('click', () => {
-        localStorage.setItem(`id-editar-${curso.sigla}`, curso.id)
-        localStorage.setItem(`nome-editar-${curso.sigla}`, curso.nome)
-        localStorage.setItem(`descricao-editar-${curso.sigla}`, curso.descricao)
-        localStorage.setItem(`sigla-editar-${curso.sigla}`, curso.sigla)
-        localStorage.setItem(`carga-editar-${curso.sigla}`, curso.carga_horaria)
-        editarCurso()
-        
+        localStorage.setItem('id-editar', curso.id)
+        localStorage.setItem(`nome-editar`, curso.nome)
+        localStorage.setItem(`descricao-editar`, curso.descricao)
+        localStorage.setItem(`sigla-editar`, curso.sigla)
+        localStorage.setItem(`carga-editar`, curso.carga_horaria)
     })
     
     //<i class="fa-solid fa-x"></i> icone de excluir
@@ -116,10 +114,10 @@ const editarCurso = () => {
     const buttonEditar = document.getElementById('salvarEditar')
 
     const idAntigo = localStorage.getItem('id-editar')
-    const nomeAntigo = localStorage.getItem('nome-editar')
-    const descricaoAntiga = localStorage.getItem('descricao-editar')
-    const siglaAntiga = localStorage.getItem('sigla-editar')
-    const cargaAntiga = localStorage.getItem('carga-editar')
+    // const nomeAntigo = localStorage.getItem('nome-editar')
+    // const descricaoAntiga = localStorage.getItem('descricao-editar')
+    // const siglaAntiga = localStorage.getItem('sigla-editar')
+    // const cargaAntiga = localStorage.getItem('carga-editar')
 
     const inputNomeCursoEditar = document.getElementById('inputNomeCursoEditar')
     const inputSiglaCursoEditar = document.getElementById('inputSiglaCursoEditar')
@@ -148,7 +146,7 @@ const editarCurso = () => {
                 "carga_horaria": cargaCurso,
                 "descricao": descricaoCurso
             }
-
+            console.log(curso)
             atualizaCurso(curso)
             window.location.reload(true) 
         }
@@ -165,8 +163,6 @@ const deletaCurso = () => {
         window.location.reload(true)
     })
 }
-    
-
 
 const carregarCards = () => {
     const container = document.querySelector('.card-container')

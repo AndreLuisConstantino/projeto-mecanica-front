@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+    <script src="../../js/adm/script.js"></script>
+    <script src="../../js/adm/crud-materias/script-crud-materias.js" defer type="module"></script>
     <title>Criar Matéria</title>
 </head>
 
@@ -47,74 +49,43 @@
         </div>
 
         <div class="card-container">
-            <div class="card__materia">
+            <!-- <div class="card__materia">
                 <span class="card__title">MATÉRIA</span>
                 <span class="card__carga">Carga Horária</span>
                 <div class="buttons__container">
-                    <!--botão modal excluir-->
+                    
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         <i class="fa-solid fa-x"></i>
                     </button>
-                    <!--botão modal excluir-->
-                    <!--botão modal editar-->
+                    
+                    
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>
-                    <!--botão modal editar-->
+                    
                 </div>
-            </div>
+            </div> -->
+            
+            
+            <!-- </div>
             <div class="card__materia">
                 <span class="card__title">MATÉRIA</span>
                 <span class="card__carga">Carga Horária</span>
                 <div class="buttons__container">
-                    <!--botão modal excluir-->
+                    
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         <i class="fa-solid fa-x"></i>
                     </button>
-                    <!--botão modal excluir-->
-                    <!--botão modal editar-->
+                    
+                    
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>
-                    <!--botão modal editar-->
+                    
                 </div>
-            </div>
-            <div class="card__materia">
-                <span class="card__title">MATÉRIA</span>
-                <span class="card__carga">Carga Horária</span>
-                <div class="buttons__container">
-                    <!--botão modal excluir-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        <i class="fa-solid fa-x"></i>
-                    </button>
-                    <!--botão modal excluir-->
-                    <!--botão modal editar-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </button>
-                    <!--botão modal editar-->
-                </div>
-            </div>
-            <div class="card__materia">
-                <span class="card__title">MATÉRIA</span>
-                <span class="card__carga">Carga Horária</span>
-                <div class="buttons__container">
-                    <!--botão modal excluir-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        <i class="fa-solid fa-x"></i>
-                    </button>
-                    <!--botão modal excluir-->
-                    <!--botão modal editar-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-editar">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </button>
-                    <!--botão modal editar-->
-                </div>
-            </div>
+            </div> -->
 
         </div>
         <!--modal adicionar-->
@@ -127,15 +98,16 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="form-curso">
+                        <div class="form-Materia">
                             <h1 class="form-title">Cadastro de informações</h1>
                             <form class="formulario-esquerdo">
                                 <div container="container_form">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nome da materia:</label>
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da
+                                            materia:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputNomeMateria" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
@@ -145,7 +117,7 @@
                                         <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputSiglaMateria" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
@@ -155,20 +127,20 @@
                                         <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputCargaMateria" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
                             </form>
                             <form class="formulario-direito">
                                 <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="textareaDescricaoMateria" rows="3"></textarea>
                             </form>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-primary" id="salvarAdicionar">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -176,23 +148,24 @@
         <!--modal adicionar-->
 
         <!--modal editar-->
-        <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="passwordHelpBlock" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR MATERIA</h1>
+                        <h1 class="modal-title fs-5" id="inputNomeMateriaEditar">EDITAR MATERIA</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="form-curso">
+                        <div class="form-Materia">
                             <h1 class="form-title">Cadastro de informações</h1>
                             <form class="formulario-esquerdo">
                                 <div container="container_form">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nome da materia:</label>
+                                        <label for="exampleFormControlInput1" class="form-label">Nome da
+                                            materia:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputNomeMateriaEditar" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
@@ -202,7 +175,7 @@
                                         <label for="exampleFormControlInput1" class="form-label">Sigla:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputSiglaMateriaEditar" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
@@ -212,20 +185,20 @@
                                         <label for="exampleFormControlInput1" class="form-label">Carga Horária:</label>
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="inputPassword5" class="form-control"
+                                        <input type="text" id="inputCargaMateriaEditar" class="form-control"
                                             aria-labelledby="passwordHelpBlock">
                                     </div>
                                 </div>
                             </form>
                             <form class="formulario-direito">
                                 <label for="exampleFormControlInput1" class="form-label">Descrição:</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="textareaDescricaoMateriaEditar" rows="3"></textarea>
                             </form>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-primary" id="salvarEditar">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -233,7 +206,7 @@
         <!--modal editar-->
 
         <!-- modal excluir-->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="modal-excluir" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
