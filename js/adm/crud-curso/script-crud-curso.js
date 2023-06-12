@@ -98,14 +98,14 @@ const criarCurso = () => {
         } else {
 
             const curso = {
-                "nome": nomeCurso,
-                "sigla": siglaCurso,
+                "nome": `${nomeCurso}`,
+                "sigla": `${siglaCurso}`,
                 "carga_horaria": cargaCurso,
-                "descricao": descricaoCurso
+                "descricao": `${descricaoCurso}`
             }
 
             inserirCurso(curso)
-            window.location.reload(true)                     
+            // window.location.reload(true)                     
         }
     })
 }
@@ -141,14 +141,13 @@ const editarCurso = () => {
 
             const curso = {
                 "id": idAntigo,
-                "nome": nomeCurso,
-                "sigla": siglaCurso,
+                "nome": `${nomeCurso}`,
+                "sigla": `${siglaCurso}`,
                 "carga_horaria": cargaCurso,
-                "descricao": descricaoCurso
+                "descricao": `${descricaoCurso}`
             }
-            console.log(curso)
             atualizaCurso(curso)
-            window.location.reload(true) 
+            // window.location.reload(true) 
         }
     })
 }

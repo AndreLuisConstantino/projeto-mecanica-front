@@ -2,7 +2,7 @@
 
 export const getCursos = async () => {
 
-    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso`
+    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso`
     const response = await fetch(url)
     const data = await response.json()
 
@@ -10,7 +10,7 @@ export const getCursos = async () => {
 }
 
 export const inserirCurso = async (curso) => {
-    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso`
+    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso`
     const options = {
         method: 'POST',
         headers: {
@@ -23,7 +23,7 @@ export const inserirCurso = async (curso) => {
 }
 
 export const atualizaCurso = async (curso) => {
-    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso/id/${curso.id}`
+    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso/id/${curso.id}`
     const options = {
         method: 'PUT',
         headers: {
@@ -36,7 +36,7 @@ export const atualizaCurso = async (curso) => {
 }
 
 export const deletarDadosCurso = async (id) => {
-    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso/id/${id}`
+    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso/${id}`
     const options = {
       method: 'DELETE'
     }
