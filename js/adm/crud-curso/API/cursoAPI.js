@@ -19,6 +19,18 @@ export const inserirCurso = async (curso) => {
         body: JSON.stringify(curso)
     }
 
+    fetch(url, options)
+}
+
+export const atualizaCurso = async (curso) => {
+    const url = `http://localhost:8080/v1/projeto-mecanica-senai/curso/id/${curso.id}`
+    const options = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(curso)
+    }
 
     fetch(url, options)
 }

@@ -2,7 +2,8 @@
 
 import {
     getCursos,
-    inserirCurso
+    inserirCurso,
+    atualizaCurso
 } from "./API/cursoAPI.js"
 
 const cursos = await getCursos()
@@ -41,14 +42,22 @@ const criarCardCurso = (curso) => {
     buttonExcluir.classList.add("btn", "btn-primary")
     buttonExcluir.setAttribute("data-bs-toggle", "modal")
     buttonExcluir.setAttribute("data-bs-target", "#modal-excluir")
+    buttonExcluir.addEventListener('click', () => {
+        localStorage.setItem('id-excluir', curso.id)
+    })
     
-
     const buttonEditar = document.createElement("button")
     buttonEditar.type = "button";
     buttonEditar.classList.add("btn", "btn-primary")
     buttonEditar.setAttribute("data-bs-toggle", "modal")
     buttonEditar.setAttribute("data-bs-target", "#modal-editar")
-    buttonEditar.onclick = localStorage.setItem('')
+    buttonEditar.addEventListener('click', () => {
+        localStorage.setItem('id-editar', curso.id)
+        localStorage.setItem('nome-editar', curso.nome)
+        localStorage.setItem('descricao-editar', curso.descricao)
+        localStorage.setItem('sigla-editar', curso.sigla)
+        localStorage.setItem('carga-editar', curso.carga_horaria)
+    })
     
     //<i class="fa-solid fa-x"></i> icone de excluir
     const iconeExcluir = document.createElement("i")
@@ -59,6 +68,7 @@ const criarCardCurso = (curso) => {
     const iconeEditar = document.createElement("i")
     iconeEditar.classList.add("fa-solid")
     iconeEditar.classList.add("fa-pen-to-square")
+
 
     link.append(cardTitle, cardH1, cardCarga)
 
@@ -99,6 +109,49 @@ const criarCurso = () => {
     })
 }
 
+const editarCurso = () => {
+    const buttonEditar = document.getElementById('salvarEditar')
+
+    const idAntigo = localStorage.getItem('id-editar')
+    const nomeAntigo = localStorage.getItem('nome-editar')
+    const descricaoAntiga = localStorage.getItem('descricao-editar')
+    const siglaAntiga = localStorage.getItem('sigla-editar')
+    const cargaAntiga = localStorage.getItem('carga-editar')
+
+    const inputNomeCursoEditar = document.getElementById('inputNomeCursoEditar')
+    const inputSiglaCursoEditar = document.getElementById('inputSiglaCursoEditar')
+    const inputCargaCursoEditar = document.getElementById('inputCargaCursoEditar')
+    const textareaDescricaoCursoEditar = document.getElementById('textareaDescricaoCursoEditar')
+
+    inputNomeCursoEditar.value = nomeAntigo
+    inputSiglaCursoEditar.value = siglaAntiga
+    inputCargaCursoEditar.value = cargaAntiga
+    textareaDescricaoCursoEditar.value = descricaoAntiga
+
+    buttonEditar.addEventListener('click', () => {
+        const nomeCurso = inputNomeCursoEditar.value
+        const siglaCurso = inputSiglaCursoEditar.value
+        const cargaCurso = inputCargaCursoEditar.value
+        const descricaoCurso = textareaDescricaoCursoEditar.value
+
+        if (nomeCurso == '' || siglaCurso == '' || isNaN(cargaCurso) || descricaoCurso == '') {
+            alert('Preencha os campos corretamente!')
+        } else {
+
+            const curso = {
+                "id": idAntigo,
+                "nome": nomeCurso,
+                "sigla": siglaCurso,
+                "carga_horaria": cargaCurso,
+                "descricao": descricaoCurso
+            }
+
+            atualizaCurso(curso)
+            window.location.reload(true)     
+        }
+    })
+}
+
 const carregarCards = () => {
     const container = document.querySelector('.card-container')
     const cards = listaCursos.map(criarCardCurso)
@@ -107,4 +160,5 @@ const carregarCards = () => {
 }
 
 criarCurso()
+editarCurso()
 carregarCards()
