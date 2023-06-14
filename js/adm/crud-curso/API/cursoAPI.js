@@ -36,10 +36,11 @@ export const atualizaCurso = async (curso) => {
 }
 
 export const deletarDadosCurso = async (id) => {
-    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso/${id}`
+    const url = `https://mecanica-senai.cyclic.app/v1/projeto-mecanica-senai/curso/id/${id}`
     const options = {
       method: 'DELETE'
     }
-  
+    console.log(id)
+
     fetch(url, options)
 }

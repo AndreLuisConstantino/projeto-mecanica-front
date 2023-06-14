@@ -44,7 +44,8 @@ const criarCardCurso = (curso) => {
     buttonExcluir.setAttribute("data-bs-toggle", "modal")
     buttonExcluir.setAttribute("data-bs-target", "#modal-excluir")
     buttonExcluir.addEventListener('click', () => {
-        localStorage.setItem('id-excluir', curso.id)
+        localStorage.setItem('id-excluir-'+ curso.id, curso.id)
+        deletaCurso(curso.id)
     })
     
     const buttonEditar = document.createElement("button")
@@ -53,11 +54,12 @@ const criarCardCurso = (curso) => {
     buttonEditar.setAttribute("data-bs-toggle", "modal")
     buttonEditar.setAttribute("data-bs-target", "#modal-editar")
     buttonEditar.addEventListener('click', () => {
-        localStorage.setItem('id-editar', curso.id)
+        localStorage.setItem('id-editar-'+ curso.id, curso.id)
         localStorage.setItem(`nome-editar`, curso.nome)
         localStorage.setItem(`descricao-editar`, curso.descricao)
         localStorage.setItem(`sigla-editar`, curso.sigla)
         localStorage.setItem(`carga-editar`, curso.carga_horaria)
+        editarCurso(curso.id)
     })
     
     //<i class="fa-solid fa-x"></i> icone de excluir
@@ -105,15 +107,15 @@ const criarCurso = () => {
             }
 
             inserirCurso(curso)
-            // window.location.reload(true)                     
+            window.location.reload(true)                     
         }
     })
 }
 
-const editarCurso = () => {
+const editarCurso = (id) => {
     const buttonEditar = document.getElementById('salvarEditar')
 
-    const idAntigo = localStorage.getItem('id-editar')
+    const idAntigo = localStorage.getItem('id-editar-'+id)
     // const nomeAntigo = localStorage.getItem('nome-editar')
     // const descricaoAntiga = localStorage.getItem('descricao-editar')
     // const siglaAntiga = localStorage.getItem('sigla-editar')
@@ -146,20 +148,21 @@ const editarCurso = () => {
                 "carga_horaria": cargaCurso,
                 "descricao": `${descricaoCurso}`
             }
+
             atualizaCurso(curso)
             // window.location.reload(true) 
         }
     })
 }
 
-const deletaCurso = () => {
+const deletaCurso = (id) => {
     const buttonExcluir = document.getElementById('excluir')
 
-    const idCurso = localStorage.getItem('id-excluir')
+    const idCurso = localStorage.getItem('id-excluir-'+id)
 
     buttonExcluir.addEventListener('click', () => {
         deletarDadosCurso(idCurso)
-        window.location.reload(true)
+        // window.location.reload(true)
     })
 }
 
@@ -171,6 +174,4 @@ const carregarCards = () => {
 }
 
 criarCurso()
-editarCurso()
-deletaCurso()
 carregarCards()
