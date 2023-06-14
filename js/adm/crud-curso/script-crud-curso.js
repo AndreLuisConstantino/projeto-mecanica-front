@@ -140,7 +140,7 @@ const editarCurso = () => {
         } else {
 
             const curso = {
-                "id": idAntigo,
+                "id": idAntigo, 
                 "nome": `${nomeCurso}`,
                 "sigla": `${siglaCurso}`,
                 "carga_horaria": cargaCurso,
